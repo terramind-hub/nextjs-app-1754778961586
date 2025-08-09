@@ -160,10 +160,10 @@ export function CartProvider({ children }: CartProviderProps) {
     getCartItemCount,
   };
 
-  return (
-    <CartContext.Provider value={value}>
-      {children}
-    </CartContext.Provider>
+  return React.createElement(
+    CartContext.Provider,
+    { value },
+    children
   );
 }
 
